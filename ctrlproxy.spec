@@ -2,7 +2,7 @@ Summary:	An IRC proxy with multi-server and plugin support
 Summary(pl):	Proxy dla IRC z obs³ug± wielu serwerów i "wtyczek"
 Name:		ctrlproxy
 Version:	2.6.1
-Release:	1.2
+Release:	1.4
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://jelmer.vernstok.nl/oss/ctrlproxy/%{name}-%{version}.tar.gz
@@ -75,8 +75,7 @@ install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name}-%{version},%{_sysconfdir}}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/%{name}rc
 cp -r example/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-
-rm -f $RPM_BUILD_ROOT/usr/share/ctrlproxy/motd
+install %{name}-setup $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -86,10 +85,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README TODO ctrlproxyrc.dtd ctrlproxyrc.example doc/ctrlproxy.{html,pdf}
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}rc
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/ctrlproxy.1*
-%{_mandir}/man5/ctrlproxyrc.5*
-%{_mandir}/man7/*
+%{_mandir}/man[157]/*
 %attr(755,root,root) %{_libdir}/%{name}
+%{_datadir}/%{name}
 
 %files devel
 %defattr(644,root,root,755)
