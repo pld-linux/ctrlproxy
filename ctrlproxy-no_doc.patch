@@ -1,0 +1,11 @@
+--- ./Makefile.in~	2005-02-04 00:31:59.000000000 +0200
++++ ./Makefile.in	2005-02-04 00:39:48.000000000 +0200
+@@ -29,7 +29,7 @@
+ %.o: %.c
+ 	$(CC) $(CFLAGS) -c $<
+ 
+-install: all install-dirs install-doc install-bin install-mods install-data
++install: all install-dirs install-bin install-mods install-data
+ install-dirs:
+ 	$(INSTALL) -d $(DESTDIR)$(bindir)
+ 	$(INSTALL) -d $(DESTDIR)$(man1dir)
