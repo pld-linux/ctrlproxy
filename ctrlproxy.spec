@@ -2,12 +2,13 @@ Summary:	An IRC proxy with multi-server and plugin support
 Summary(pl):	Proxy dla IRC z obs³ug± wielu serwerów i "wtyczek"
 Name:		ctrlproxy
 Version:	2.6.1
-Release:	1
+Release:	1.2
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://jelmer.vernstok.nl/oss/ctrlproxy/%{name}-%{version}.tar.gz
 # Source0-md5:	07e802ab99309ecce7ad3b87b16399fb
 Source1:	%{name}rc
+Patch0:		%{name}-no_doc.patch
 URL:		http://jelmer.vernstok.nl/oss/ctrlproxy/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -53,6 +54,7 @@ Pliki nag³ówkowe i przyk³ady s³u¿±ce do rozwijania modu³ów ctrlproxy.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__gettextize}
@@ -74,16 +76,19 @@ install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name}-%{version},%{_sysconfdir}}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/%{name}rc
 cp -r example/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
+rm -f $RPM_BUILD_ROOT/usr/share/ctrlproxy/motd
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README TODO ctrlproxyrc.dtd ctrlproxyrc.example
+%doc AUTHORS ChangeLog README TODO ctrlproxyrc.dtd ctrlproxyrc.example doc/ctrlproxy.{html,pdf}
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}rc
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/ctrlproxy.1*
 %{_mandir}/man5/ctrlproxyrc.5*
+%{_mandir}/man7/*
 %attr(755,root,root) %{_libdir}/%{name}
 
 %files devel
