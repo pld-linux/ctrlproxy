@@ -12,7 +12,7 @@ URL:		http://jelmer.vernstok.nl/oss/ctrlproxy/
 BuildRequires:	libxml2-devel
 BuildRequires:	tdb-devel
 BuildRequires:	pcre-devel
-BuildRequires:	glib-devel
+BuildRequires:	glib2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
