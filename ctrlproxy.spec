@@ -78,7 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README TODO
+%doc AUTHORS ChangeLog README TODO ctrlproxyrc.dtd ctrlproxyrc.example
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}rc
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/ctrlproxy.1*
