@@ -1,11 +1,23 @@
---- ./Makefile.in~	2005-02-04 00:31:59.000000000 +0200
-+++ ./Makefile.in	2005-02-04 00:39:48.000000000 +0200
-@@ -29,7 +29,7 @@
- %.o: %.c
- 	$(CC) $(CFLAGS) -c $<
+--- ./Makefile.in~	2005-02-04 00:54:39.000000000 +0200
++++ ./Makefile.in	2005-02-04 00:54:55.000000000 +0200
+@@ -45,9 +45,6 @@
  
--install: all install-dirs install-doc install-bin install-mods install-data
-+install: all install-dirs install-bin install-mods install-data
- install-dirs:
- 	$(INSTALL) -d $(DESTDIR)$(bindir)
- 	$(INSTALL) -d $(DESTDIR)$(man1dir)
+ install-doc:
+ 	$(INSTALL) ctrlproxy.h $(DESTDIR)$(includedir)
+-	$(INSTALL) AUTHORS $(DESTDIR)$(docdir)
+-	$(INSTALL) COPYING $(DESTDIR)$(docdir)
+-	$(INSTALL) TODO $(DESTDIR)$(docdir)
+ 
+ install-data:
+ 	$(INSTALL) motd $(DESTDIR)$(datadir)
+--- ../doc/Makefile.in~	2004-01-19 21:29:52.000000000 +0200
++++ ../doc/Makefile.in	2005-02-04 00:52:54.000000000 +0200
+@@ -55,8 +55,6 @@
+ 	$(INSTALL) ctrlproxy.1 $(DESTDIR)$(man1dir)
+ 	$(INSTALL) ctrlproxyrc.5 $(DESTDIR)$(man5dir)
+ 	$(INSTALL) $(MOD_MANPAGES) $(DESTDIR)$(man7dir)
+-	$(INSTALL) ctrlproxy.pdf $(DESTDIR)$(docdir)
+-	$(INSTALL) ctrlproxy.html $(DESTDIR)$(docdir)
+ else
+ 	@echo
+ 	@echo "---------------------------------------------------------------"
