@@ -8,6 +8,7 @@ Group:		Networking/Daemons
 Source0:	http://jelmer.vernstok.nl/oss/ctrlproxy/%{name}-%{version}.tar.gz
 # Source0-md5:	b807dedad9f158e45d927e1744c8d36c
 Source1:	%{name}rc
+Patch0:		%{name}-gcc295.patch
 URL:		http://jelmer.vernstok.nl/oss/ctrlproxy/
 BuildRequires:	glib2-devel
 BuildRequires:	libxml2-devel
@@ -49,6 +50,7 @@ Pliki nag³ówkowe i przyk³ady s³u¿±ce do rozwijania modu³ów ctrlproxy.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__gettextize}
