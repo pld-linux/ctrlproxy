@@ -9,10 +9,11 @@ Source0:	http://jelmer.vernstok.nl/oss/ctrlproxy/%{name}-%{version}.tar.gz
 # Source0-md5:	b807dedad9f158e45d927e1744c8d36c
 Source1:	%{name}rc
 URL:		http://jelmer.vernstok.nl/oss/ctrlproxy/
-BuildRequires:	libxml2-devel
-BuildRequires:	tdb-devel
-BuildRequires:	pcre-devel
 BuildRequires:	glib2-devel
+BuildRequires:	libxml2-devel
+BuildRequires:	pcre-devel
+BuildRequires:	popt-devel
+BuildRequires:	tdb-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
