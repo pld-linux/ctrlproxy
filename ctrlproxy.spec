@@ -67,11 +67,11 @@ Pliki nag³ówkowe i przyk³ady s³u¿±ce do rozwijania modu³ów ctrlproxy.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name}-%{version},%{_sysconfdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name}-%{version},%{_sysconfdir}}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/%{name}rc
 cp -r example/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
