@@ -33,7 +33,7 @@
             <ipv4 host="poznan.irc.pl" port="6667"/>
          </servers>
          <channel name="#pld" autojoin="1"/>
-         <channel name="#pld-help" autojoin="1"/>
+         <channel name="#pldhelp" autojoin="1"/>
          <autosend>PRIVMSG ctrlsoft :Hi There, I'm using ctrlproxy!</autosend>
       </network>
    </networks>
