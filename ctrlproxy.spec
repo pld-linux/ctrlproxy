@@ -1,12 +1,12 @@
 Summary:	An IRC proxy with multi-server and plugin support
 Summary(pl):	Proxy dla IRC z obs³ug± wielu serwerów i "wtyczek"
 Name:		ctrlproxy
-Version:	2.6
+Version:	2.6.1
 Release:	1
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://jelmer.vernstok.nl/oss/ctrlproxy/%{name}-%{version}.tar.gz
-# Source0-md5:	f4d242cad2175f1626bb1d5558a8326a
+# Source0-md5:	07e802ab99309ecce7ad3b87b16399fb
 Source1:	%{name}rc
 URL:		http://jelmer.vernstok.nl/oss/ctrlproxy/
 BuildRequires:	autoconf
