@@ -30,7 +30,7 @@ connected to.
 ctrlproxy jest modularnym serwerem IRC proxy. £±czy siê z wieloma
 serwerami IRC i przekazuje odebrane dane modu³om które zosta³y
 za³adowane. W chwili obecnej dostêpne s± modu³y client_simple (do
-obs³ugi proxy) i log (do tworzenia logów w formacie irssi)
+obs³ugi proxy) i log (do tworzenia logów w formacie irssi).
 
 Domy¶lnie, ctrlproxy oczekuje na po³±czenia od klientów na porcie 6668
 i dowolnej ilo¶ci kolejnych portów, zale¿nie od ilo¶ci serwerów do
@@ -42,10 +42,10 @@ Summary(pl):	Pliki nag³ówkowe i przyk³ady s³u¿±ce do rozwijania modu³ów ctrlprox
 Group:		Development/Libraries
 
 %description devel
-Header files and examples for developing ctrlproxy modules
+Header files and examples for developing ctrlproxy modules.
 
 %description devel -l pl
-Pliki nag³ówkowe i przyk³ady s³u¿±ce do rozwijania modu³ów ctrlproxy
+Pliki nag³ówkowe i przyk³ady s³u¿±ce do rozwijania modu³ów ctrlproxy.
 
 %prep
 %setup -q
