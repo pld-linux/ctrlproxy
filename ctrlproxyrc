@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ctrlproxy>
+   <plugins>
+      <plugin file="/usr/lib/ctrlproxy/libsocket"/>
+      <plugin file="/usr/lib/ctrlproxy/librepl_memory"/>
+      <plugin file="/usr/lib/ctrlproxy/liblog_irssi">
+         <logfile>/var/log/ctrlproxy</logfile>
+      </plugin>
+      <plugin file="/usr/lib/ctrlproxy/libctcp"/>
+      <plugin file="/usr/lib/ctrlproxy/libstrip"/>
+      <plugin file="/usr/lib/ctrlproxy/libauto-away">
+         <message time="300">"I'm currently away, sorry!</message>
+      </plugin>
+      <plugin file="/usr/lib/ctrlproxy/libstats">
+         <tdbfile>/var/log/ctrlproxy-stats.tdb</tdbfile>
+         <pattern type="happy">[:;]([-]*)[\)D]</pattern>
+         <pattern type="unhappy">[:;]([-]*)[\/\(]</pattern>
+         <pattern type="foul">(shit|damn|godverdomme|fuck|klote|kurwa|pierd.*)</pattern>
+         <pattern type="question">\?([^ ]*)$</pattern>
+         <pattern type="exclamation">!([^ ]*)$</pattern>
+         <pattern type="lines">(.*)</pattern>
+         <pattern type="word">([^ ]+)</pattern>
+         <pattern type="caps">^([^a-z]+)$</pattern>
+         <pattern type="action">.ACTION .</pattern>
+      </plugin>
+   </plugins>
+   <networks>
+      <network client_pass="secret" name="IRCNet" nick="proxy_client" username="guest" fullname="ctrlproxy user">
+         <servers>
+            <ipv4 host="warszawa.irc.pl" port="6667"/>
+            <ipv4 host="lublin.irc.pl" port="6667"/>
+            <ipv4 host="krakow.irc.pl" port="6667"/>
+            <ipv4 host="poznan.irc.pl" port="6667"/>
+         </servers>
+         <channel name="#pld" autojoin="1"/>
+         <channel name="#pld-help" autojoin="1"/>
+         <autosend>PRIVMSG ctrlsoft :Hi There, I'm using ctrlproxy!</autosend>
+      </network>
+   </networks>
+</ctrlproxy>
