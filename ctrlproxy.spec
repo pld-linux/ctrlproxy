@@ -8,7 +8,6 @@ Group:		Networking/Daemons
 Source0:	http://jelmer.vernstok.nl/oss/ctrlproxy/%{name}-%{version}.tar.gz
 # Source0-md5:	b807dedad9f158e45d927e1744c8d36c
 Source1:	%{name}rc
-# Source1-md5:	49b69818aea6e7bbd9b1549377f369bd
 URL:		http://jelmer.vernstok.nl/oss/ctrlproxy/
 BuildRequires:	libxml2-devel
 BuildRequires:	tdb-devel
