@@ -5,7 +5,7 @@ Version:	2.6.2
 Release:	1
 License:	GPL
 Group:		Networking/Daemons
-Source0:        http://jelmer.vernstok.nl/releases/%{name}-%{version}.tar.gz
+Source0:	http://jelmer.vernstok.nl/releases/%{name}-%{version}.tar.gz
 # Source0-md5:  62fc258cb17902b38b39dc5c5a4e27f9
 Source1:	%{name}rc
 Patch0:		%{name}-no_doc.patch
@@ -83,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO ctrlproxyrc.dtd ctrlproxyrc.example doc/*.xml doc/figures/*.pdf
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}rc
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/%{name}rc
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/%{name}
 %{_datadir}/%{name}
