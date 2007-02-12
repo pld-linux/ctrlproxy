@@ -1,5 +1,5 @@
 Summary:	An IRC proxy with multi-server and plugin support
-Summary(pl.UTF-8):   Proxy dla IRC z obsługą wielu serwerów i "wtyczek"
+Summary(pl.UTF-8):	Proxy dla IRC z obsługą wielu serwerów i "wtyczek"
 Name:		ctrlproxy
 Version:	2.6.2
 Release:	1
@@ -43,7 +43,7 @@ których jest podłączony.
 
 %package devel
 Summary:	Header files and examples for developing ctrlproxy modules
-Summary(pl.UTF-8):   Pliki nagłówkowe i przykłady służące do rozwijania modułów ctrlproxy
+Summary(pl.UTF-8):	Pliki nagłówkowe i przykłady służące do rozwijania modułów ctrlproxy
 Group:		Development/Libraries
 
 %description devel
