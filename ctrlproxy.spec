@@ -1,5 +1,5 @@
 Summary:	An IRC proxy with multi-server and plugin support
-Summary(pl):	Proxy dla IRC z obs≥ug± wielu serwerÛw i "wtyczek"
+Summary(pl.UTF-8):   Proxy dla IRC z obs≈ÇugƒÖ wielu serwer√≥w i "wtyczek"
 Name:		ctrlproxy
 Version:	2.6.2
 Release:	1
@@ -31,26 +31,26 @@ By default, ctrlproxy listens for client connections on port 6668 and
 any ports after that one, depending on the number of servers it is
 connected to.
 
-%description -l pl
-ctrlproxy jest modularnym serwerem proxy dla IRC. £±czy siÍ z wieloma
-serwerami IRC i przekazuje odebrane dane modu≥om ktÛre zosta≥y
-za≥adowane. W chwili obecnej dostÍpne s± modu≥y client_simple (do
-obs≥ugi proxy) i log (do tworzenia logÛw w formacie irssi).
+%description -l pl.UTF-8
+ctrlproxy jest modularnym serwerem proxy dla IRC. ≈ÅƒÖczy siƒô z wieloma
+serwerami IRC i przekazuje odebrane dane modu≈Çom kt√≥re zosta≈Çy
+za≈Çadowane. W chwili obecnej dostƒôpne sƒÖ modu≈Çy client_simple (do
+obs≈Çugi proxy) i log (do tworzenia log√≥w w formacie irssi).
 
-Domy∂lnie, ctrlproxy oczekuje na po≥±czenia od klientÛw na porcie 6668
-i dowolnej liczbie kolejnych portÛw, zaleønie od liczby serwerÛw do
-ktÛrych jest pod≥±czony.
+Domy≈õlnie, ctrlproxy oczekuje na po≈ÇƒÖczenia od klient√≥w na porcie 6668
+i dowolnej liczbie kolejnych port√≥w, zale≈ºnie od liczby serwer√≥w do
+kt√≥rych jest pod≈ÇƒÖczony.
 
 %package devel
 Summary:	Header files and examples for developing ctrlproxy modules
-Summary(pl):	Pliki nag≥Ûwkowe i przyk≥ady s≥uø±ce do rozwijania modu≥Ûw ctrlproxy
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe i przyk≈Çady s≈Çu≈ºƒÖce do rozwijania modu≈Ç√≥w ctrlproxy
 Group:		Development/Libraries
 
 %description devel
 Header files and examples for developing ctrlproxy modules.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe i przyk≥ady s≥uø±ce do rozwijania modu≥Ûw ctrlproxy.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe i przyk≈Çady s≈Çu≈ºƒÖce do rozwijania modu≈Ç√≥w ctrlproxy.
 
 %prep
 %setup -q
