@@ -12,7 +12,7 @@ Patch0:		%{name}-no_doc.patch
 URL:		http://jelmer.vernstok.nl/oss/ctrlproxy/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel
